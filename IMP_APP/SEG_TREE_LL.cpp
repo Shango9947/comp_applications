@@ -61,7 +61,7 @@ ll query(int v, int tl, int tr, int l, int r) {
     void upd(int v, int tl, int tr, int l, int r, ll addend) {
         if (l > r) { return; }
         if (l == tl && tr == r) {
-            t[v] = new_val;
+            t[v] += addend;
         } else {
             int tm = (tl + tr) / 2;
             if(pos <= tm) 
