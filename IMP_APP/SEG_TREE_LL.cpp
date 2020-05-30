@@ -44,7 +44,7 @@ ll query(int v, int tl, int tr, int l, int r) {
     vector<ll> t;
     int n; vector<ll>vec;
     SEG(vector<ll>&a , int n) {
-        this->n = n; vec.resize(n+1); t.resize(4*MAX_N);
+        this->n = n; vec.resize(n+1); t.resize(4*n);
         rep(i, 0, n) vec[i] = a[i];
     }
     ll combine(ll a, ll b) {
