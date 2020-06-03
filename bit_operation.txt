@@ -1,0 +1,9 @@
+(a + b) = (a XOR b) + 2(a&b)
+
+(a XOR b) = (a + b)%2
+
+(a XOR b) = 2(a OR b) - (a + b)
+
+You can find the XOR of the an array numbers from (l, r) by taking bitwise summation of the elements! And if sum is even then
+there will be '0' bit otherwise '1'. And now you can apply matrix multiplication for the summation too :) [Refer problem HXR 
+codechef] (* _ *)
