@@ -1,6 +1,6 @@
 (a + b) = (a XOR b) + 2(a&b)
 
-(a XOR b) = (a + b)%2
+(a XOR b) = (a + b)%2 bitwise!
 
 (a XOR b) = 2(a OR b) - (a + b)
 
