@@ -12,17 +12,17 @@ struct HashInterval {
 	HashInterval(vi& str,H Co) : ha(str.size()+1), pw(ha) {
 		C=Co;
 		pw[0] = 1;
-		rep(i,0,sz(str))
+		rep(i,0,str.size())
 			ha[i+1] = ha[i] * C + str[i],
 			pw[i+1] = pw[i] * C;
 	}
 	HashInterval(string& str, H C) : ha(str.size()+1), pw(ha), C(C) {
 		pw[0] = 1;
-		rep(i,0,sz(str))
+		rep(i,0,str.size())
 			ha[i+1] = ha[i] * C + str[i],
 			pw[i+1] = pw[i] * C;
 	}
-	H hashInterval(int a, int b) { // hash [a, b)
+	H hashInterval(int a, int b) { // hash [a, b) //0 based indexing can be taken as (a, a+length)
 		return ha[b] - ha[a] * pw[b - a];
 	}
 };
